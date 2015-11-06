@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* org.pw.test.vertx.web.App
+web: java $JAVA_OPTS -jar target/test-vertx-web-1.0-SNAPSHOT-fat.jar
