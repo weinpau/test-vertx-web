@@ -25,8 +25,17 @@ public class HelloWorld extends AbstractVerticle {
 
         vertx.createHttpServer()
               .requestHandler(router::accept)
-              .listen(8080);
-
+              .listen(port());
 
     }
+
+    public static int port() {
+        String port = System.getenv("PORT");
+        if (port == null) {
+            return 8080;
+        } else {
+            return Integer.parseInt(port);
+        }
+    }
+
 }
